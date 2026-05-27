@@ -1,0 +1,47 @@
+[Authorize]
+[HttpPost("/nextquestions")]
+public IActionResult GetNextQuestions([FromBody] QueResponse queResponse)
+{
+    var user = GetCurrentUser();
+    QuestionModel? questionModel = null;
+    if (user != null)
+    {
+        conn.Open();
+        try
+        {   
+            UserRiskAnswer(user,queResponse);
+            string query = "select COUNT(*) from userQueAns WHERE email = '"+user.Email+"'";
+            Console.WriteLine(query);
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                Console.WriteLine(query);
+                int count = (Int32)command.ExecuteScalar();
+                Console.WriteLine(count);
+                if (count < 4)
+                {
+                    questionModel = NextQuestions(count + 1);
+                }
+                else
+                {
+                    
+                    questionModel = new QuestionModel();
+                    questionModel.lastQuestion = true;
+                    RiskAmount riskCal = GetRiskAmount(user);
+                    questionModel.riskAmount = riskCal.riskAmount;
+                    return Ok(JsonConvert.SerializeObject(questionModel));
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            conn.Close();
+            return NotFound(null);
+        }
+        conn.Close();
+        if (questionModel != null)
+            return Ok(JsonConvert.SerializeObject(questionModel));
+        return NotFound(null);
+    }
+    return BadRequest(null);
+}

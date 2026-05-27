@@ -1,0 +1,62 @@
+
+#container-profile{
+
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding : 150px 50px;
+    
+    }
+#profile-pic {
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 100px;
+    min-width: 100px;
+    border-radius: 50%;
+    float: left;
+    padding: 30px;
+}
+#profile-info {
+    margin-left: 10%;
+    padding-top: 4%;
+
+}
+.div1 {
+    border-radius: 5px;
+    margin-left: 5%;
+    width: 80%;
+    margin-right: 5%;
+    padding: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    background-color: #E5A750;
+    position: absolute;
+    z-index:10;
+    
+}
+
+/* .but {
+    text-align: center;
+    background-color: #000000;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    cursor: grab;
+    font-size: 20px;
+    width: 200px;
+    padding: 12px 28px;
+}
+
+    .but:hover {
+        background-color: white;
+        color: black;
+    } */

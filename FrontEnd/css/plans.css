@@ -1,0 +1,34 @@
+/* #container-plans{
+background: #2C3E50;  /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*} */
+/*#container-plans{
+background: #4CA1AF;  /* fallback for old browsers */
+/*margin-top: 100px;
+padding : 150px 50px;
+}
+*/
+#container-plans{
+
+background: #2C3E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+padding : 150px 50px;
+
+}
+#plansImages {
+    height: 100%;
+    width: 100%;
+}
+#plansImages:hover{
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px #706f6f;
+  
+}
+
+#navbarItem > li {
+
+    margin:0px 5px 0px 5px;
+}

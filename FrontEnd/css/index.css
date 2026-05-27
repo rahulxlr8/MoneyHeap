@@ -1,0 +1,31 @@
+#loginBox {
+    display: none;
+    z-index: +5;
+    position:absolute;
+    left: 12.5%;	
+}
+#loginForm, #signupForm {
+background-color: #4CA1AF;
+color :  white;
+}
+
+#SignupBox {
+    display: none;
+    z-index: +5;
+    position:absolute;
+    left: 12.5%;
+	
+}
+
+#makeMoney{
+font-family : Monospace;
+}
+
+#moneyheap{
+font-family : Candara;
+}
+
+#corousel-img {
+
+object-fit:contain;
+}
